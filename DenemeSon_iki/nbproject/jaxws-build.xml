@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-MyWebService1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MyWebService1"/>
+        <property name="wsdl-MyWebService1" location="xml-resources/web-service-references/MyWebService1/wsdl/192.168.1.22_8084/MatrisWebService1/MyWebService1.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MyWebService1" destdir="${build.generated.dir}/jax-wsCache/MyWebService1" wsdl="${wsdl-MyWebService1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.22:8084/MatrisWebService1/MyWebService1?wsdl" xnocompile="true" xendorsed="true" package="pack1">
+            <depends file="${wsdl-MyWebService1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MyWebService1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MyWebService1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MyWebService1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MyWebService1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/pack1"/>
+    </target>
+    <target name="wsimport-client-MyWebService1_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/MyWebService1_1"/>
+        <property name="wsdl-MyWebService1_1" location="xml-resources/web-service-references/MyWebService1_1/wsdl/192.168.1.8_8084/MatrisWebService1/MyWebService1.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/MyWebService1_1" destdir="${build.generated.dir}/jax-wsCache/MyWebService1_1" wsdl="${wsdl-MyWebService1_1}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://192.168.1.8:8084/MatrisWebService1/MyWebService1?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-MyWebService1_1}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/MyWebService1_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/MyWebService1_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-MyWebService1_1" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/MyWebService1_1"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/paket1"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-MyWebService1, wsimport-client-MyWebService1_1"/>
+</project>

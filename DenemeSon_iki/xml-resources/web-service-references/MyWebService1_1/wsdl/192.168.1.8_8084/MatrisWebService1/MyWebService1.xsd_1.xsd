@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://paket1/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://paket1/">
+
+<xs:element name="carpim" type="tns:carpim" />
+
+<xs:element name="carpimResponse" type="tns:carpimResponse" />
+
+<xs:element name="ikinci_matris_al" type="tns:ikinci_matris_al" />
+
+<xs:element name="ikinci_matris_alResponse" type="tns:ikinci_matris_alResponse" />
+
+<xs:element name="matris_boyut_ayarla" type="tns:matris_boyut_ayarla" />
+
+<xs:element name="matris_boyut_ayarlaResponse" type="tns:matris_boyut_ayarlaResponse" />
+
+<xs:complexType name="carpim">
+<xs:sequence>
+<xs:element name="satir_no" type="xs:int" />
+<xs:element name="satir" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="carpimResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ikinci_matris_al">
+<xs:sequence>
+<xs:element name="satir_no" type="xs:int" />
+<xs:element name="matris_2_satir" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ikinci_matris_alResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="matris_boyut_ayarla">
+<xs:sequence>
+<xs:element name="matris_boyut" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="matris_boyut_ayarlaResponse">
+<xs:sequence />
+</xs:complexType>
+</xs:schema>

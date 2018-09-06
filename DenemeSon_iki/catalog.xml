@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://192.168.1.22:8084/MatrisWebService1/MyWebService1?wsdl" uri="xml-resources/web-service-references/MyWebService1/wsdl/192.168.1.22_8084/MatrisWebService1/MyWebService1.wsdl"/>
+    <system systemId="http://192.168.1.22:8084/MatrisWebService1/MyWebService1?xsd=1" uri="xml-resources/web-service-references/MyWebService1/wsdl/192.168.1.22_8084/MatrisWebService1/MyWebService1.xsd_1.xsd"/>
+    <system systemId="http://192.168.1.8:8084/MatrisWebService1/MyWebService1?wsdl" uri="xml-resources/web-service-references/MyWebService1_1/wsdl/192.168.1.8_8084/MatrisWebService1/MyWebService1.wsdl"/>
+    <system systemId="http://192.168.1.8:8084/MatrisWebService1/MyWebService1?xsd=1" uri="xml-resources/web-service-references/MyWebService1_1/wsdl/192.168.1.8_8084/MatrisWebService1/MyWebService1.xsd_1.xsd"/>
+</catalog>
